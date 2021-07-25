@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.get('/',(req, res)=>{
   res.send('Hello amazing gardens')
 })
-mongoose.connect('mongodb+srv://first-user:CptnAwesome317@cluster0.h3nw0.mongodb.net/Workshop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('DB-Info', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
